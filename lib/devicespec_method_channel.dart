@@ -15,9 +15,14 @@ class MethodChannelDevicespec extends DevicespecPlatform {
     return version;
   }
 
+  
+
+
   @override
   Future<String?> getDevice() async {
     final device = await methodChannel.invokeMethod<String>('getDevice');
     return device;
   }
+
+
 }

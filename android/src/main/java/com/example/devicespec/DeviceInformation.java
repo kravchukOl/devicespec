@@ -4,6 +4,7 @@ import java.util.Enumeration;
 import java.util.Properties;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -62,10 +63,19 @@ public class DeviceInformation {
 	public static String getUser() {return Build.USER;}
 	public static String getHost() {return  Build.HOST;}
 
+	public static String getSerial() {
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+			return Build.getSerial();
+		}
+		else {
+			return Build.SERIAL;
+		}
+	}
 
-	public String getDeviceSuperInfo() {
 
-		String s = "Device-infos:";
+	public String getDeviceBaseInfo() {
+
+		String s = "";
 
 		try {
 			s += "\n OS Version: "      + System.getProperty("os.version")      + "(" + android.os.Build.VERSION.INCREMENTAL + ")";
