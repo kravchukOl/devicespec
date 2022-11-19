@@ -23,11 +23,72 @@ abstract class DevicespecPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
+
+  Future<String?> getPlatformVersion() async {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Future<String?> getDevice() {
+  Future<String?> getgetOSAPILevel() async {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getDevice() async {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getModel() async {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getRelease() async {
+   throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getBrand() async {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getProduct() async {
+   throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getManufacturer() async {
+   throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getTags() async {
+ throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getDisplay() async {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getSerial() async {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getHardware() async {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getCPU_ABI() async {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getCPU_AB2() async {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getUser() async {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getHost() async {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<String?> getDeviceBaseInfo() async {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 }
