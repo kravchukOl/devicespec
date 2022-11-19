@@ -73,7 +73,7 @@ public class DeviceInformation {
 	}
 
 
-	public String getDeviceBaseInfo() {
+	public static String getDeviceBaseInfo() {
 
 		String s = "";
 

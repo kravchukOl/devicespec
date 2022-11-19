@@ -25,70 +25,70 @@ abstract class DevicespecPlatform extends PlatformInterface {
 
 
   Future<String?> getPlatformVersion() async {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getPlatformVersion() has not been implemented.');
   }
 
   Future<String?> getgetOSAPILevel() async {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getgetOSAPILevel() has not been implemented.');
   }
 
   Future<String?> getDevice() async {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getDevice() has not been implemented.');
   }
 
   Future<String?> getModel() async {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getModel() has not been implemented.');
   }
 
   Future<String?> getRelease() async {
-   throw UnimplementedError('platformVersion() has not been implemented.');
+   throw UnimplementedError('getRelease() has not been implemented.');
   }
 
   Future<String?> getBrand() async {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getBrand() has not been implemented.');
   }
 
   Future<String?> getProduct() async {
-   throw UnimplementedError('platformVersion() has not been implemented.');
+   throw UnimplementedError('getProduct() has not been implemented.');
   }
 
   Future<String?> getManufacturer() async {
-   throw UnimplementedError('platformVersion() has not been implemented.');
+   throw UnimplementedError('getManufacturer() has not been implemented.');
   }
 
   Future<String?> getTags() async {
- throw UnimplementedError('platformVersion() has not been implemented.');
+ throw UnimplementedError('getTags() has not been implemented.');
   }
 
   Future<String?> getDisplay() async {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getDisplay() has not been implemented.');
   }
 
   Future<String?> getSerial() async {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getSerial() has not been implemented.');
   }
 
   Future<String?> getHardware() async {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getHardware() has not been implemented.');
   }
 
   Future<String?> getCPU_ABI() async {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getCPU_ABI() has not been implemented.');
   }
 
   Future<String?> getCPU_AB2() async {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getCPU_AB2() has not been implemented.');
   }
 
   Future<String?> getUser() async {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getUser() has not been implemented.');
   }
 
   Future<String?> getHost() async {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getHost() has not been implemented.');
   }
 
   Future<String?> getDeviceBaseInfo() async {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getDeviceBaseInfo() has not been implemented.');
   }
 }
