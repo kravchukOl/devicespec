@@ -26,7 +26,13 @@ public class DevicespecPlugin implements FlutterPlugin, MethodCallHandler {
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
     if (call.method.equals("getPlatformVersion")) {
       result.success("Android " + android.os.Build.VERSION.RELEASE);
-    } else {
+    }
+
+    if(call.method.equals("getDevice")){
+      result.success(DeviceInformation.getDevice());
+    }
+
+    else {
       result.notImplemented();
     }
   }

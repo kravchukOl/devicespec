@@ -10,6 +10,12 @@ class MockDevicespecPlatform
 
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
+  
+  @override
+  Future<String?> getDevice() {
+    // TODO: implement getDevice
+    throw UnimplementedError();
+  }
 }
 
 void main() {
