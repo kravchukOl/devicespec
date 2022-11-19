@@ -1,4 +1,4 @@
-package simpleui.util;
+package com.example.devicespec;
 
 import java.util.Enumeration;
 import java.util.Properties;
@@ -22,9 +22,11 @@ import android.os.Looper;
 import android.os.PowerManager;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Display;
 
 public class DeviceInformation {
+
 	public static boolean isConnectedToMobileInternet(Context c) {
 		// mobile
 		State mobile = ((ConnectivityManager) c
@@ -42,15 +44,57 @@ public class DeviceInformation {
 		return activeNetworkInfo != null;
 	}
 
-	/**
-	 * use {@link SystemUtil#isGlass()} instead
-	 * 
-	 * @return
-	 */
-	@Deprecated
-	public static boolean isGlass() {
-		return SystemUtil.isGlass();
-	}
+
+    public static String getOSVersion()  {return System.getProperty("os.version");}
+	public static String getOSAPILevel()  {return android.os.Build.VERSION.INCREMENTAL;}
+	public static String getDevice() {return android.os.Build.DEVICE; }
+	public static String getModel() {return android.os.Build.MODEL;}
+	public static String getRelease() {return android.os.Build.VERSION.RELEASE;}
+	public static String getBrand() {return android.os.Build.BRAND; }
+	public static String getProduct() {return android.os.Build.PRODUCT;}
+	public static String getManufacturer() {return  Build.MANUFACTURER;}
+	public static String getTags() {return  android.os.Build.TAGS;}
+	public static String getDisplay() {return android.os.Build.DISPLAY;}
+	public static String getCPU_ABI() {return android.os.Build.CPU_ABI;}
+	public static String getCPU_ABI2() {return android.os.Build.CPU_ABI2;}
+	public static String getUnknown() {return  Build.UNKNOWN;}
+	public static String getHardware() {return Build.HARDWARE;}
+	public static String getUser() {return Build.USER;}
+	public static String getHost() {return  Build.HOST;}
+
+
+	public String getDeviceSuperInfo() {
+
+		String s = "Device-infos:";
+
+		try {
+			s += "\n OS Version: "      + System.getProperty("os.version")      + "(" + android.os.Build.VERSION.INCREMENTAL + ")";
+			s += "\n OS API Level: "    + android.os.Build.VERSION.SDK_INT;
+			s += "\n Device: "          + android.os.Build.DEVICE;
+			s += "\n Model (and Product): " + android.os.Build.MODEL            + " ("+ android.os.Build.PRODUCT + ")";
+
+			s += "\n RELEASE: "         + android.os.Build.VERSION.RELEASE;
+			s += "\n BRAND: "           + android.os.Build.BRAND;
+			s += "\n DISPLAY: "         + android.os.Build.DISPLAY;
+			s += "\n CPU_ABI: "         + android.os.Build.CPU_ABI;
+			s += "\n CPU_ABI2: "        + android.os.Build.CPU_ABI2;
+			s += "\n UNKNOWN: "         + android.os.Build.UNKNOWN;
+			s += "\n HARDWARE: "        + android.os.Build.HARDWARE;
+			s += "\n Build ID: "        + android.os.Build.ID;
+			s += "\n MANUFACTURER: "    + android.os.Build.MANUFACTURER;
+			s += "\n SERIAL: "          + android.os.Build.SERIAL;
+			s += "\n USER: "            + android.os.Build.USER;
+			s += "\n HOST: "            + android.os.Build.HOST;
+
+		} catch (Exception e) {
+
+		}
+
+		return s;
+	}//end getDeviceSuperInfo
+
+
+
 
 	public static String getInfosAboutDevice(Activity a) {
 		String s = "";
@@ -65,14 +109,11 @@ public class DeviceInformation {
 		}
 		s += "\n OS Version: " + System.getProperty("os.version") + " ("
 				+ android.os.Build.VERSION.INCREMENTAL + ")";
-		s += "\n OS API Level: " + android.os.Build.VERSION.SDK;
+		s += "\n OS API Level: " + Build.VERSION.SDK_INT;
 		s += "\n Device: " + android.os.Build.DEVICE;
 		s += "\n Model (and Product): " + android.os.Build.MODEL + " ("
 				+ android.os.Build.PRODUCT + ")";
-		// TODO add application version!
 
-		// more from
-		// http://developer.android.com/reference/android/os/Build.html :
 		s += "\n Manufacturer: " + android.os.Build.MANUFACTURER;
 		s += "\n Other TAGS: " + android.os.Build.TAGS;
 
