@@ -102,10 +102,13 @@ class MockDevicespecPlatform
   }
   
   @override
-  Future<String?> getgetOSAPILevel() {
+  Future<String?> getOSAPILevel() {
     // TODO: implement getgetOSAPILevel
     throw UnimplementedError();
   }
+
+  @override
+  dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
 void main() {

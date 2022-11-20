@@ -17,7 +17,7 @@ class MethodChannelDevicespec extends DevicespecPlatform {
   }
 
   @override
-  Future<String?> getgetOSAPILevel() async {
+  Future<String?> getOSAPILevel() async {
     final version = await methodChannel.invokeMethod<String>('getOSAPILevel');
     return version;
   }

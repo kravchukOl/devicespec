@@ -7,8 +7,8 @@ class Devicespec {
     return DevicespecPlatform.instance.getPlatformVersion();
   }
 
-   Future<String?> getgetOSAPILevel() {
-    return DevicespecPlatform.instance.getgetOSAPILevel();
+   Future<String?> getOSAPILevel() {
+    return DevicespecPlatform.instance.getOSAPILevel();
   }
 
   Future<String?> getDevice() {

@@ -28,7 +28,7 @@ abstract class DevicespecPlatform extends PlatformInterface {
     throw UnimplementedError('getPlatformVersion() has not been implemented.');
   }
 
-  Future<String?> getgetOSAPILevel() async {
+  Future<String?> getOSAPILevel() async {
     throw UnimplementedError('getgetOSAPILevel() has not been implemented.');
   }
 
