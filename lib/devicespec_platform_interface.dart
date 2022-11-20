@@ -23,11 +23,72 @@ abstract class DevicespecPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+
+  Future<String?> getPlatformVersion() async {
+    throw UnimplementedError('getPlatformVersion() has not been implemented.');
   }
 
-  Future<String?> getDevice() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+  Future<String?> getOSAPILevel() async {
+    throw UnimplementedError('getgetOSAPILevel() has not been implemented.');
+  }
+
+  Future<String?> getDevice() async {
+    throw UnimplementedError('getDevice() has not been implemented.');
+  }
+
+  Future<String?> getModel() async {
+    throw UnimplementedError('getModel() has not been implemented.');
+  }
+
+  Future<String?> getRelease() async {
+   throw UnimplementedError('getRelease() has not been implemented.');
+  }
+
+  Future<String?> getBrand() async {
+    throw UnimplementedError('getBrand() has not been implemented.');
+  }
+
+  Future<String?> getProduct() async {
+   throw UnimplementedError('getProduct() has not been implemented.');
+  }
+
+  Future<String?> getManufacturer() async {
+   throw UnimplementedError('getManufacturer() has not been implemented.');
+  }
+
+  Future<String?> getTags() async {
+ throw UnimplementedError('getTags() has not been implemented.');
+  }
+
+  Future<String?> getDisplay() async {
+    throw UnimplementedError('getDisplay() has not been implemented.');
+  }
+
+  Future<String?> getSerial() async {
+    throw UnimplementedError('getSerial() has not been implemented.');
+  }
+
+  Future<String?> getHardware() async {
+    throw UnimplementedError('getHardware() has not been implemented.');
+  }
+
+  Future<String?> getCPU_ABI() async {
+    throw UnimplementedError('getCPU_ABI() has not been implemented.');
+  }
+
+  Future<String?> getCPU_AB2() async {
+    throw UnimplementedError('getCPU_AB2() has not been implemented.');
+  }
+
+  Future<String?> getUser() async {
+    throw UnimplementedError('getUser() has not been implemented.');
+  }
+
+  Future<String?> getHost() async {
+    throw UnimplementedError('getHost() has not been implemented.');
+  }
+
+  Future<String?> getDeviceBaseInfo() async {
+    throw UnimplementedError('getDeviceBaseInfo() has not been implemented.');
   }
 }

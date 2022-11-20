@@ -13,9 +13,102 @@ class MockDevicespecPlatform
   
   @override
   Future<String?> getDevice() {
-    // TODO: implement getDevice
+
     throw UnimplementedError();
   }
+  
+  @override
+  Future<String?> getBrand() {
+    // TODO: implement getBrand
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<String?> getCPU_AB2() {
+    // TODO: implement getCPU_AB2
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<String?> getCPU_ABI() {
+    // TODO: implement getCPU_ABI
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<String?> getDeviceBaseInfo() {
+    // TODO: implement getDeviceBaseInfo
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<String?> getDisplay() {
+    // TODO: implement getDisplay
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<String?> getHardware() {
+    // TODO: implement getHardware
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<String?> getHost() {
+    // TODO: implement getHost
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<String?> getManufacturer() {
+    // TODO: implement getManufacturer
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<String?> getModel() {
+    // TODO: implement getModel
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<String?> getProduct() {
+    // TODO: implement getProduct
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<String?> getRelease() {
+    // TODO: implement getRelease
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<String?> getSerial() {
+    // TODO: implement getSerial
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<String?> getTags() {
+    // TODO: implement getTags
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<String?> getUser() {
+    // TODO: implement getUser
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<String?> getOSAPILevel() {
+    // TODO: implement getgetOSAPILevel
+    throw UnimplementedError();
+  }
+
+  @override
+  dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
 void main() {

@@ -73,7 +73,7 @@ public class DeviceInformation {
 	}
 
 
-	public String getDeviceBaseInfo() {
+	public static String getDeviceBaseInfo() {
 
 		String s = "";
 
@@ -101,53 +101,8 @@ public class DeviceInformation {
 		}
 
 		return s;
-	}//end getDeviceSuperInfo
-
-
-
-
-	public static String getInfosAboutDevice(Activity a) {
-		String s = "";
-		try {
-			PackageInfo pInfo = a.getPackageManager().getPackageInfo(
-					a.getPackageName(), PackageManager.GET_META_DATA);
-			s += "\n APP Package Name: " + a.getPackageName();
-			s += "\n APP Version Name: " + pInfo.versionName;
-			s += "\n APP Version Code: " + pInfo.versionCode;
-			s += "\n";
-		} catch (NameNotFoundException e) {
-		}
-		s += "\n OS Version: " + System.getProperty("os.version") + " ("
-				+ android.os.Build.VERSION.INCREMENTAL + ")";
-		s += "\n OS API Level: " + Build.VERSION.SDK_INT;
-		s += "\n Device: " + android.os.Build.DEVICE;
-		s += "\n Model (and Product): " + android.os.Build.MODEL + " ("
-				+ android.os.Build.PRODUCT + ")";
-
-		s += "\n Manufacturer: " + android.os.Build.MANUFACTURER;
-		s += "\n Other TAGS: " + android.os.Build.TAGS;
-
-		s += "\n screenWidth: "
-				+ a.getWindow().getWindowManager().getDefaultDisplay()
-						.getWidth();
-		s += "\n screenHeigth: "
-				+ a.getWindow().getWindowManager().getDefaultDisplay()
-						.getHeight();
-		s += "\n Keyboard available: "
-				+ (a.getResources().getConfiguration().keyboard != Configuration.KEYBOARD_NOKEYS);
-
-		s += "\n Trackball available: "
-				+ (a.getResources().getConfiguration().navigation == Configuration.NAVIGATION_TRACKBALL);
-		s += "\n SD Card state: " + Environment.getExternalStorageState();
-		Properties p = System.getProperties();
-		Enumeration keys = p.keys();
-		String key = "";
-		while (keys.hasMoreElements()) {
-			key = (String) keys.nextElement();
-			s += "\n > " + key + " = " + (String) p.get(key);
-		}
-		return s;
 	}
+
 
 	public static boolean isPositioningViaWifiEnabled(Context context) {
 		ContentResolver cr = context.getContentResolver();
